@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 
 #画像の読み込み
-img = cv2.imread(r"C:\Users\KuratomoOyo\Desktop\yoshimura\images\IMG_8394.jpg")
+img = cv2.imread(Image_Path)
 #BGRからRGBに変換（これしないと画像が変な色になります）
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
@@ -11,7 +11,7 @@ height = img.shape[0]
 width = img.shape[1]
 resized_img = cv2.resize(img_rgb,(round(width/4), round(height/4)))
 
-#青を抽出
+#緑を抽出
 bgr = [90,150,20]
 thresh = 20
 
